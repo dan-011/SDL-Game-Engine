@@ -32,7 +32,7 @@ public:
 
 	void EndScene();
 
-	void SetBackgroundColor(Color& color);
+	void SetBackgroundColor(const Color& color);
 	Color GetBackgroundColor();
 
 	SDL_Event GetEvent();

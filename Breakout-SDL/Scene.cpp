@@ -85,7 +85,7 @@ void Scene::EndScene() {
 	quit = true;
 }
 
-void Scene::SetBackgroundColor(Color& color) {
+void Scene::SetBackgroundColor(const Color& color) {
 	backgroundColor = color;
 }
 Color Scene::GetBackgroundColor() {

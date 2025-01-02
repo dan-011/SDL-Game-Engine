@@ -1,0 +1,60 @@
+Create a component for timer callbacks (inherits from component)
+COMPONENTS should be anything in the scene
+Scenes should always inherit from Scene and Component
+Scenes should add themselves as components
+
+We want a class for all visual items. It will have a position, layer, and support rendering.
+We also want to make a collisio
+Visual Items (creating a visual item adds it to the manager):
+	- Rect
+	- line
+	- Pixel
+	- Sprite -> sprites have pointers to rendered textures
+		- AnimatedSprite
+	- ViewPort
+	- Text
+
+CollisionShapes (support a method to show the shape):
+	- Rectangle
+	- Circle
+	- Elipse
+
+GameManager:
+- supports rendering everything
+- contains a dictionary for all visual items
+
+Scene:
+- Can be played
+- contain components
+
+TextureManager:
+- static member
+- renders all textures to VRAM at launch
+- associates file paths to textures
+
+Entity
+	- 
+
+CanvasItem
+- Data Members:
+	- Layer
+- Methods:
+	- Draw(to window)
+
+Rect : CanvasItem
+
+CollisionShape
+
+
+Visual2D:
+- Data Members:
+	- Layer
+- Methods:
+	- Draw(to window)
+
+Rect : ImageItems
+- Data Members:
+	- SDL_Rect
+	- Color
+- Methods:
+

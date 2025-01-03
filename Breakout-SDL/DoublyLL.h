@@ -18,7 +18,7 @@ class DoublyLL {
 public:
 	DoublyLL() : length(0), head(NULL), tail(NULL) {}
 	~DoublyLL() {
-		while (head) PopBack();
+		while (head) PopBack(); // we're allowed to do this because deleting the LLNode doesn't delete it's contents (we want this)
 	}
 
 	int Size() {
@@ -38,10 +38,12 @@ public:
 			head->prev = node;
 			node->next = head;
 			head = node;
+			mapping.insert({ val, node });
 		}
 		else {
 			head = new LLNode<T>(val);
 			tail = head;
+			mapping.insert({ val, head });
 		}
 		length++;
 	}
@@ -52,12 +54,14 @@ public:
 			node->prev = tail;
 			tail = node;
 			length++;
+			mapping.insert({ val, node });
 		}
 		else PushFront(val);
 	}
 	void PopFront() {
 		if (length == 1) {
 			LLNode<T>* toDel = head;
+			mapping.erase(toDel->val);
 			head = NULL;
 			tail = NULL;
 			delete toDel;
@@ -65,6 +69,7 @@ public:
 		}
 		else if (length > 1) {
 			LLNode<T>* toDel = head;
+			mapping.erase(toDel->val);
 			head = head->next;
 			head->prev = NULL;
 			delete toDel;
@@ -75,6 +80,7 @@ public:
 		if (length == 1) PopFront();
 		else if (length > 1) {
 			LLNode<T>* toDel = tail;
+			mapping.erase(toDel->val);
 			tail = tail->prev;
 			tail->next = NULL;
 			delete toDel;
@@ -93,6 +99,7 @@ public:
 				next->prev = prev;
 				length--;
 				delete node;
+				mapping.erase(value);
 			}
 		}
 	}
@@ -125,6 +132,10 @@ public:
 	}
 	Iterator end() {
 		return Iterator(NULL);
+	}
+
+	bool Empty() {
+		return !length;
 	}
 
 private:

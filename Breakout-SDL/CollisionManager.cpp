@@ -94,39 +94,6 @@ bool CollisionManager::IsColliding(LineShape& shapeA, CircleShape& shapeB) {
     return shapeB.PointInside(closestPt);
 }
 
-/*bool CollisionManager::IsColliding(LineShape& shapeA, CircleShape& shapeB) {
-    Vector2f pt1;
-    Vector2f pt2;
-    shapeA.GetPoints(pt1, pt2);
-    if (shapeB.PointInside(pt1) || shapeB.PointInside(pt2)) return true;
-
-    Vector2f cntrPt = shapeB.GetCenterPoint();
-    float radius = shapeB.GetRadius();
-
-    float m;
-    float b;
-    if (LineSegment(pt1, pt2, m, b)) {
-        float a = pt2.y - pt1.y;
-        float b = pt1.x - pt2.x;
-        float negB = FlipSign(b);
-        float det = Determinant(a, b, negB, a);
-        if (det == 0) return true;
-
-        float c1 = (a * pt1.x) + (b * pt1.y);
-        float c2 = (negB * cntrPt.x) + (a * cntrPt.y);
-
-        Vector2f closestPoint(Determinant(a, b, c2, c1) / det, Determinant(a, negB, c1, c2) / det);
-
-        return shapeB.PointInside(closestPoint);
-    }
-    else {
-        float minY = Min(pt1.y, pt2.y);
-        float maxY = Max(pt1.y, pt2.y);
-
-        return FAbs(pt1.x - cntrPt.x) <= radius && minY <= cntrPt.y && maxY >= cntrPt.y;
-    }
-}*/
-
 // rectangle
 bool CollisionManager::IsColliding(RectangleShape& shapeA, RectangleShape& shapeB) {
     Vector2f posA = shapeA.GetPos();

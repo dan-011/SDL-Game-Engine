@@ -2,7 +2,7 @@
 #include "RectangleShape.h"
 #include "GameManager.h"
 
-RectangleShape::RectangleShape(const Vector2f& pos, const Vector2f& dimensions, const Color& clr, bool fill, int layer, bool visibility) : Shape(pos, dimensions, clr, layer, visibility) {
+RectangleShape::RectangleShape(const Vector2f& pos, const Vector2f& dimensions, const Color& clr, bool fill, int layer, bool visibility) : Shape(pos, dimensions, clr, fill, layer, visibility) {
 	rect = { (int)pos.x, (int)pos.y, (int)dimensions.x, (int)dimensions.y };
 }
 RectangleShape::~RectangleShape() {}
@@ -28,6 +28,7 @@ void RectangleShape::Render() {
 	SDL_Renderer* renderer = GameManager::Instance().GetRenderer();
 	Color color = GetColor();
 	SDL_SetRenderDrawColor(renderer, color.R, color.G, color.B, color.A);
+	
 	if (GetFilled()) SDL_RenderFillRect(renderer, &rect);
 	else SDL_RenderDrawRect(renderer, &rect);
 }

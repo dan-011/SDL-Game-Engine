@@ -28,6 +28,6 @@ void VisualComponent2D::SetDims(float x, float y) {
 void VisualComponent2D::SetDims(const Vector2f& dimensions) {
 	dims = dimensions;
 }
-Vector2f VisualComponent2D::GetDims() {
+Vector2f VisualComponent2D::GetDims() const {
 	return dims;
 }

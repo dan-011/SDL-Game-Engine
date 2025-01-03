@@ -4,8 +4,6 @@
 #include "RectangleShape.h"
 #include "DEMO.h"
 #include "Scene.h"
-#include <iostream>
-#include <string>
 
 int main(int argc, char* argv[])
 {

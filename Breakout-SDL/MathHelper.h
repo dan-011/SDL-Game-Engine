@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL.h>
+#include <utility>
 
 #define FLOAT_PAD 0.0001f
 
@@ -30,3 +31,10 @@ float FlipSign(float val);
 float Interpolate(float goal, float cur, Uint32 approach);
 
 float Determinant(float aX, float aY, float bX, float bY);
+
+struct PairHash {
+	template <class T1, class T2>
+	std::size_t operator () (const std::pair<T1, T2>& p) const {
+		return std::hash<T1>{}(p.first) ^ std::hash<T2>{}(p.second);
+	}
+};

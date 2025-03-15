@@ -1,4 +1,3 @@
-#pragma once
 #include "RectangleShape.h"
 #include "GameManager.h"
 

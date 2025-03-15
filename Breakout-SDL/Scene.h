@@ -21,6 +21,7 @@ public:
 
 	virtual void NotifyEvent(SDL_Event* e);
 	virtual void NotifyKeystate(const Uint8* keys);
+	virtual void HandleInputs();
 
 	// we may modify this to only add components when they support an update construct (save space and time)
 	void AddComponent(Component* component);
@@ -41,6 +42,8 @@ public:
 	void DisableEvents();
 	void EnableKeys();
 	void DisableKeys();
+
+	void QuitGame();
 
 protected:
 	CollisionManager collisionManager;

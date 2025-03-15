@@ -5,6 +5,8 @@
 #include "PointShape.h"
 #include "LineShape.h"
 
+// TODO: implement collision detections across multiple objects
+
 class CollisionManager {
 public:
 	CollisionManager();

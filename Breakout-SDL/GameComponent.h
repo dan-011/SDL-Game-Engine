@@ -8,7 +8,7 @@ public:
 	GameComponent(const Vector2f& position);
 	virtual ~GameComponent();
 
-	Vector2f GetPos();
+	Vector2f GetPos() const;
 	virtual void SetPos(float x, float y);
 	virtual void SetPos(const Vector2f& position);
 

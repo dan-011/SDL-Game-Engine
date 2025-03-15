@@ -1,2 +1,23 @@
-﻿  Main.cpp
-  Breakout-SDL.vcxproj -> C:\Users\dpali\Documents\C++ Projects\Breakout-SDL\x64\Debug\Breakout-SDL.exe
+﻿  CircleShape.cpp
+  CollisionManager.cpp
+  FontManager.cpp
+  GameComponent.cpp
+  GameManager.cpp
+  GeometryHelper.cpp
+  ImageComponent.cpp
+  InputManager.cpp
+  LineShape.cpp
+  Main.cpp
+C:\Users\dpali\Documents\C++ Projects\Breakout\SDL-Game-Engine\Breakout-SDL\Breakout.h(22,106): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\dpali\Documents\C++ Projects\Breakout\SDL-Game-Engine\Breakout-SDL\Breakout.h(262,27): warning C4267: '+=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  MathHelper.cpp
+  MovingBody.cpp
+  PointShape.cpp
+  RectangleShape.cpp
+  Scene.cpp
+  Shape.cpp
+  TextComponent.cpp
+  TextureComponent.cpp
+  VisualComponent.cpp
+  Generating Code...
+  Breakout-SDL.vcxproj -> C:\Users\dpali\Documents\C++ Projects\Breakout\SDL-Game-Engine\x64\Debug\Breakout-SDL.exe

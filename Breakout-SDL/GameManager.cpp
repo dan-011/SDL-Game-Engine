@@ -1,6 +1,4 @@
 #include "GameManager.h"
-#include <iostream>
-using namespace std;
 
 GameManager::GameManager() : gameWindow(NULL), gameRenderer(NULL) {}
 
@@ -21,7 +19,6 @@ bool GameManager::Init() {
 	/*if ((gameRenderer = SDL_CreateRenderer(gameWindow, -1, 0)) == NULL)
 		return false;*/
 	if ((gameRenderer = SDL_CreateRenderer(gameWindow, -1, SDL_RENDERER_ACCELERATED)) == NULL) {
-		cout << "Renderer failed" << endl;
 		return false;
 	}
 	return true;

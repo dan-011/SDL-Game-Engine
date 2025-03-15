@@ -1,5 +1,6 @@
 #include "Scene.h"
 #include "GameManager.h"
+#include "InputManager.h"
 #include <SDL.h>
 
 Scene::Scene() : ticks(0), quit(false), backgroundColor(0xFF, 0xFF, 0xFF), e(), eventsEnabled(true), keysEnabled(true) {
@@ -24,8 +25,14 @@ void Scene::Play() {
 			while (SDL_PollEvent(&e) != 0)
 			{
 				if (e.type == SDL_QUIT) quit = true;
-				else if (eventsEnabled) NotifyEvent(&e);
+				else if (eventsEnabled) {
+					InputManager::Instance().UpdateInputs();
+					NotifyEvent(&e);
+				}
 			}
+			//HandleInputs();
+			InputManager::Instance().UpdateInputs();
+			HandleInputs();
 			if (keysEnabled) {
 				const Uint8* keys = SDL_GetKeyboardState(NULL);
 				NotifyKeystate(keys);
@@ -85,7 +92,7 @@ void Scene::EndScene() {
 	quit = true;
 }
 
-void Scene::SetBackgroundColor(Color& color) {
+void Scene::SetBackgroundColor(const Color& color) {
 	backgroundColor = color;
 }
 Color Scene::GetBackgroundColor() {
@@ -105,4 +112,10 @@ void Scene::EnableKeys() {
 }
 void Scene::DisableKeys() {
 	keysEnabled = false;
+}
+
+void Scene::HandleInputs() {}
+
+void Scene::QuitGame() {
+	quit = true;
 }

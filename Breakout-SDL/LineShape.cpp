@@ -27,7 +27,7 @@ void LineShape::SetPoints(float xA, float yA, float xB, float yB) {
 	pointB = Vector2f(xB, yB);
 }
 
-void LineShape::GetPoints(Vector2f& destPtA, Vector2f& destPtB) {
+void LineShape::GetPoints(Vector2f& destPtA, Vector2f& destPtB) const {
 	destPtA = GetPos();
 	destPtB = pointB;
 }

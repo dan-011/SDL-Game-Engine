@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -139,20 +139,27 @@
   <ItemGroup>
     <ClCompile Include="CircleShape.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="GameComponent.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GeometryHelper.cpp" />
+    <ClCompile Include="ImageComponent.cpp" />
+    <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="LineShape.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MathHelper.cpp" />
     <ClCompile Include="MovingBody.cpp" />
     <ClCompile Include="PointShape.cpp" />
+    <ClCompile Include="QuadTree.cpp" />
     <ClCompile Include="RectangleShape.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="TextComponent.cpp" />
+    <ClCompile Include="TextureComponent.cpp" />
     <ClCompile Include="VisualComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Breakout.h" />
     <ClInclude Include="CircleShape.h" />
     <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="Color.h" />
@@ -160,18 +167,24 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="DoublyLL.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="FontManager.h" />
     <ClInclude Include="GameComponent.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GeometryHelper.h" />
+    <ClInclude Include="ImageComponent.h" />
+    <ClInclude Include="InputManager.h" />
     <ClInclude Include="LineShape.h" />
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="MovingBody.h" />
+    <ClInclude Include="ParticlesComponent.h" />
     <ClInclude Include="PointShape.h" />
-    <ClInclude Include="DEMO.h" />
+    <ClInclude Include="QuadTree.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Stager.h" />
-    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TextComponent.h" />
+    <ClInclude Include="TextureComponent.h" />
+    <ClInclude Include="UniformGrid.h" />
     <ClInclude Include="Vector2f.h" />
     <ClInclude Include="Vector2i.h" />
     <ClInclude Include="VisualComponent.h" />

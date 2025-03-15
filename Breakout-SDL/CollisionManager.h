@@ -5,6 +5,8 @@
 #include "PointShape.h"
 #include "LineShape.h"
 
+// TODO: make static class
+
 class CollisionManager {
 public:
 	CollisionManager();

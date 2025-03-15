@@ -15,7 +15,7 @@ public:
 	void SetPoints(const Vector2f& ptA, const Vector2f& ptB);
 	void SetPoints(float xA, float yA, float xB, float yB);
 
-	void GetPoints(Vector2f& destPtA, Vector2f& destPtB);
+	void GetPoints(Vector2f& destPtA, Vector2f& destPtB) const;
 
 	virtual void Render() override;
 

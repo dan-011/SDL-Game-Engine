@@ -29,7 +29,7 @@ public:
 
 	virtual void SetDims(float x, float y);
 	virtual void SetDims(const Vector2f& dimensions);
-	virtual Vector2f GetDims();
+	virtual Vector2f GetDims() const;
 
 private:
 	Vector2f dims;

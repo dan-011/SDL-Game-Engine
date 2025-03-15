@@ -1,3 +1,20 @@
+TODO: 
+- Create particle effects on the ball
+- Add music
+
+
+Textures:
+- We want these to be visualcomponent2d objects
+Text:
+- Font(ttf file, font size)
+- Surface(string text, color)
+> Changing font text or color requires new surface
+> Changing font size requires new font object
+
+Img:
+- A lot more straightforward
+- Specifying what pieces of the image to render can be done dynamically
+
 Create a component for timer callbacks (inherits from component)
 COMPONENTS should be anything in the scene
 Scenes should always inherit from Scene and Component

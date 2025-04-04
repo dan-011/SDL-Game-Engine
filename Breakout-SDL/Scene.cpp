@@ -2,6 +2,9 @@
 #include "GameManager.h"
 #include <SDL.h>
 
+#include <iostream>
+using namespace std;
+
 Scene::Scene() : ticks(0), quit(false), backgroundColor(0xFF, 0xFF, 0xFF), e(), eventsEnabled(true), keysEnabled(true) {
 	
 }
@@ -17,7 +20,7 @@ void Scene::Play() {
 
 		//const Uint8* keys = SDL_GetKeyboardState(NULL);
 		//NotifyKeystate(keys);
-		if (ticks - SDL_GetTicks() >= 16) {
+		if (SDL_GetTicks() - ticks >= 16) {
 			UpdateComponents();
 			ticks = SDL_GetTicks();
 
